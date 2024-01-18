@@ -36,7 +36,7 @@ const Main = (props) => {
 
   return (
     <>
-    <div className=' flex justify-center p-7'>
+    <div className=' flex justify-center p-7' style={{background:theme.body , color: theme.text}}>
       <button className=' bg-gray-500 text-white rounded-md px-6 py-1' onClick={changeTheme}>
         click
       </button>
@@ -44,7 +44,7 @@ const Main = (props) => {
 
 
 
-      <div className=' grid '>
+      {/* <div className=' grid '>
 
         <div className='flex justify-center' style={{ color: theme.text, background: theme.body }}> hello main </div>
 
@@ -53,7 +53,7 @@ const Main = (props) => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ratione aut ex at nesciunt saepe temporibus a! Ab, recusandae dicta sapiente corporis quisquam quae eius dolores quod aperiam autem. Dolorem.
         </p>
 
-      </div>
+      </div> */}
 
     </>
   )

@@ -9,7 +9,7 @@ const ReactLogo = (props) => {
     return (
         <>
             <div className="App" >
-                <header className="App-header" style={{background:theme.body}} >
+                <header className="App-header" style={{background:theme.body , color: theme.text}} >
                     <img src={logo} className="App-logo" alt="logo" />
                     <p>
                         Edit <code>src/App.js</code> and save to reload.

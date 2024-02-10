@@ -36,8 +36,15 @@ const Main = (props) => {
 
   return (
     <>
-    <div className=' flex justify-center p-7' style={{background:theme.body , color: theme.text}}>
-      <button className=' bg-gray-500 text-white rounded-md px-6 py-1' onClick={changeTheme}>
+    <div>
+
+      
+
+    </div>
+    <div className=' flex h-screen w-screen justify-center items-center p-7' style={{background:theme.body , color: theme.text}}>
+      <button 
+      style={{color:theme.text}}
+      className=' h-fit w-fit bg-gray-500 rounded-md px-6 py-1' onClick={changeTheme}>
         click
       </button>
     </div>

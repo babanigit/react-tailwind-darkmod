@@ -22,7 +22,7 @@ function App() {
       <ThemeProvider theme={themes[theme]}>
 
         <Main theme={themes[theme]} setTheme={setTheme} />
-        <ReactLogo theme={themes[theme]} />
+        {/* <ReactLogo theme={themes[theme]} /> */}
 
       </ThemeProvider>
 

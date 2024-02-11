@@ -1,55 +1,54 @@
-
-import React,{ useState} from 'react'
+import React, { useState } from "react";
 
 const Main = (props) => {
-  const theme = props.theme
+  const theme = props.theme;
   // const setTheme = props.setTheme
 
-
   // one way
-  const [currTheme, setCurrTheme]= useState(theme)
+  const [currTheme, setCurrTheme] = useState(theme.name);
+  const [keep, setKeep] = useState(true);
   function changeTheme() {
-    console.log("clicked") 
+    console.log("clicked");
     if (currTheme === "light") {
-      props.setTheme("dark")
-      setCurrTheme("dark")
+      props.setTheme("dark");
+      setCurrTheme("dark");
+      setKeep(true);
+    } else {
+      props.setTheme("light");
+      setCurrTheme("light");
+      setKeep(false);
     }
-    else {
-      props.setTheme("light")
-      setCurrTheme("light")
-    }    
   }
-
-  // // another way
-  // function changeTheme() {
-  //   console.log("onclick clicked")
-
-
-  //   if (theme === "light") {
-  //     props.setTheme("dark")
-  //   }
-
-  //   else if (theme ==="dark"){
-  //     props.setTheme("light")
-  //   }
-  // }
 
   return (
     <>
-    <div>
+      {/* main div */}
+      <div
+        className=" grid grid-rows-4 grid-flow-col h-screen w-screen justify-center items-center"
+        style={{ background: theme.body, color: theme.text }}
+      >
+        {/* div 1 */}
+        <div
+          className={
+            "flex row-span-3 w-screen h-full flex justify-evenly items-center"
+          }
+        >
+          <p>hello</p>
+          <p>hello2</p>
+          <p>hello3</p>
+        </div>
 
-      
-
-    </div>
-    <div className=' flex h-screen w-screen justify-center items-center p-7' style={{background:theme.body , color: theme.text}}>
-      <button 
-      style={{color:theme.text}}
-      className=' h-fit w-fit bg-gray-500 rounded-md px-6 py-1' onClick={changeTheme}>
-        click
-      </button>
-    </div>
-
-
+        {/* div 2 */}
+        <div className=" w-screen h-full flex justify-center items-center">
+          <button
+            style={{ color: theme.text }}
+            className=" h-fit w-fit bg-gray-500 rounded-md px-6 py-1"
+            onClick={changeTheme}
+          >
+            {keep ? "light" : "dark"}
+          </button>
+        </div>
+      </div>
 
       {/* <div className=' grid '>
 
@@ -61,9 +60,8 @@ const Main = (props) => {
         </p>
 
       </div> */}
-
     </>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

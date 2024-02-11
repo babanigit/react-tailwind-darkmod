@@ -28,9 +28,12 @@ const Main = (props) => {
         style={{ background: theme.body, color: theme.text }}
       >
         {/* div 1 */}
+        <div className=" text-3xl flex justify-center items-center h-full w-full ">
+          <p>hey there</p>
+        </div>
         <div
           className={
-            "flex row-span-3 w-screen h-full flex justify-evenly items-center"
+            "flex row-span-2 w-screen h-full flex justify-evenly items-center"
           }
         >
           <p>hello</p>
@@ -39,10 +42,13 @@ const Main = (props) => {
         </div>
 
         {/* div 2 */}
-        <div className=" w-screen h-full flex justify-center items-center">
+        <div className=" grid-rows-4 w-screen h-full grid justify-center items-center bg-slate-400   ">
+          <p className="  grid row-span-1 justify-center items-bottom"></p>
+
+          <div className="flex justify-center items-center">click here</div>
           <button
             style={{ color: theme.text }}
-            className=" h-fit w-fit bg-gray-500 rounded-md px-6 py-1"
+            className=" h-fit w-fit bg-gray-500 rounded-md px-6 py-1 "
             onClick={changeTheme}
           >
             {keep ? "light" : "dark"}
